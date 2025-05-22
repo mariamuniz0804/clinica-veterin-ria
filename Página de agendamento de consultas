@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv=""> 
+    <head>
+        <title>Página de Agendamento de consultas</title>
+         <link rel="shortcut icon" href="" type="image/x-icon">
+    
+    <body>
+    <h1>Aréa de agendamentos</h1>
+  <fieldset>
+            <legend>Agendamento de consultas</legend>
+        <form action="index.html">
+
+               <label>Nome:</label>
+                <input type="text" 
+                    name="nome" 
+                  placeholder=""/>
+                  <br>
+                <label>Celular:</label>
+                <input type="tel" 
+                    name="telefone"
+                    placeholder="" 
+                    required />
+                    <br>                 
+                <label>E-mail:</label>
+                <input type="email" 
+                    name="email"
+                    placeholder="Digite seu e-mail"       
+                    required @/>
+                    </form>
+                </fieldset>
+
+                    <form>
+                    <fieldset>
+                    <label>seus pets são?</label>
+                <select name="Animal">
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="outro">Outro</option>
+                    <br></select>
+                 <label>Data e horário</label>
+                 <input type="date">
+                 <input type="time">
+                 <br>
+                 <label>Nome do pet</label>
+                 <br>
+                   <input name="Nome do pet"></input>
+                   <br>
+                   <label>Nome do pet (se quiser inclçuir maisn de um)</label>
+                   <br>
+                   <input name="Nome do pet"></input>
+                   <br>
+                   <label>Nome do pet (se quiser inclçuir maisn de um)</label>
+                   <Br>
+                   <input name="Nome do pet"></input>
+                   <br><br>
+                   <button type="submit">Agendar</button>
+                   
+
+                  
+                   
+
+             
+            </form>
+
+        </fieldset>
+
+    </body>
+    </head>
+</html>
