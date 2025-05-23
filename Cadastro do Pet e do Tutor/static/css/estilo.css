@@ -9,21 +9,9 @@
     font-family: "Inter", sans-serif;
 }
 
-
-header {
-    background-color: #5a9c5a;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 30px;
-}
 .logo img {
     height: 120px;
     margin-top: 20px;
-}
-
-
-nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -31,17 +19,34 @@ nav ul li a {
     gap: 30px;
     display: flex;
     align-items: center;
-
 }
 
 
 header nav a:hover {
-    color: #000000;
+    color:white;
+    text-decoration: none;
+    justify-items: end;
+    font-size: 18px;
+ 
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+nav {
+   display: flex; 
+   align-items: center;
+    gap: 23px;
+    text-decoration-color: #ffffff;
+
 }
 
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   background-color: #E5FFEC;
 }
@@ -75,10 +80,22 @@ main h2 {
 }
 
 .linha {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  height: auto; 
+  align-items: center;
 }
+
+.linha input[type="text"],
+.linha input[type="email"],
+.linha input[type="password"],
+.linha input[type="date"] {
+  box-shadow: none; 
+  margin-top: 5px;
+}
+
+.botao {
+  box-shadow: none; 
+}
+
 
 label {
   flex: 1;
@@ -94,7 +111,7 @@ input[type="text"] {
   box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
 }
 
-.checkboxes {
+.radios {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -106,8 +123,6 @@ input[type="text"] {
     justify-content: end;
    flex-direction: row;
 }
-
-
 
 
 .telefone {
@@ -137,117 +152,92 @@ input[type="text"] {
 }
 
 footer {
-  background-color: #5a9e6f;
-  color: white;
+  background-color: #6CA782;
   padding: 20px;
+  color: white;
   position: relative;
-  overflow: hidden;
-}
-
-.footer-blocos {
-  width: 100%;
   text-align: center;
 }
 
-.footer-esquerda,
-.footer-centro,
-.footer-direita {
-  width: 32%;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
+.cap {
+  display: flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  gap: 15px;
   margin-bottom: 10px;
 }
 
-
-
-footer {
-  background-color: #5a9e6f;
-  color: white;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
+.redes img {
+  width: 35px;
+  margin: 0 5px;
 }
 
-.footer-blocos {
-  width: 100%;
-  text-align: center;
-}
-
-.footer-esquerda,
-.footer-centro {
-  width: 49%;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-}
-
-.footer-esquerda {
-  text-align: left;
-}
-
-footer {
-  background-color: #5a9e6f;
-  color: white;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.logo-footer {
-  width: 120px;
-}
-
-
-.cachorro {
-  position: absolute;
-  right: 0;
-  width: 350px;
-}
-
-.cachorro {
-  position: absolute;
-  right: 10px;
-  bottom: 0;
-  height: 50px;
-  z-index: 10;
-}
-
-
-.redes-sociais {
-  text-align: center;
-  margin: 10px 0;
-}
-
-.redes-sociais a {
-  margin: 0 10px;
-  font-size: 22px;
-  color: white;
-  text-decoration: none;
-}
-
-.copyright {
-  text-align: center;
-  font-size: 12px;
+footer p {
   margin-top: 10px;
+  font-size: 12px;
 }
-
-.cachorro {
- position: relative;
-  right: 20px;
-  bottom: 0;
-  height: 300px;
-}
-
 
 .cachorro {
   position: absolute;
-  bottom: -10;
-  right: 0;
-  width: 350px;
+  bottom: 80px;;
+  right: 0px;
+  width: 410px;
 }
 
-hr {
-  border: 0cm;
-  border-top: 10px solid #3e965b;
+.pata {
+  color: green;
+}
+
+.form {
+  display: flex;
+  align-items: start;
+  padding: 20px;
+  border: 2px solid #59A96D;
+  border-radius: 5px;
+}
+
+.botao-form {
+  border-radius: 20px;
+  background-color: #E5FFEC;
+  height: 5vh;
+  width: 150%;
+}
+
+.botao-form-n {
+  border-radius: 20px;
+  background-color: #E5FFEC;
+  height: 5vh;
+  width: 100%;
+}
+
+.balao {
+  display: flex;
+  flex-direction: column;
+  background-color: #59A96D;
+  padding: 20px;
+  width: 40vw;
+  border-radius: 20px;
+}
+
+.cadastro-tutor {
+  background-color: #E5FFEC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.balao h2, label {
+  color: #E5FFEC;
+}
+
+.balao .linha.center {
+  display: flex;
+  justify-content: center;
+}
+
+.balao .botao {
+  background-color: #5ba86f;
+}
+.balao .botao:hover {
+  background-color: #219b42;
 }

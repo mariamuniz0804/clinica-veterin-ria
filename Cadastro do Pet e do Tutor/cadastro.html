@@ -1,5 +1,4 @@
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,16 +13,16 @@
         </div>
 
         <nav>
-            <a href="index.html">Inicial</a>
+            <a href="index.html">Inicio</a>
+            <a href="cadastro.html">Cadastro</a>
             <a href="agendamento.html">Agendamento</a>
-            <a href="index.html">Sobre</a>
             <img src="img.jpg/icon instagrem.png" alt="icone Instagram" />
         </nav>
     </header>
 
 
     <main>
-        <h2>Cadastro do Pet e do Tutor</h2>
+        <h2>Cadastro do Pet</h2>
 
         <form class="cadastro-form">
             <div class="linha">
@@ -33,9 +32,10 @@
 
             <div class="linha">
                 <label>Peso do Pet:<input type="text" value="5kg" /></label>
-                <div class="checkboxes"> <br>
-                    <label><input type="checkbox" checked /> Fêmea</label>
-                    <label><input type="checkbox" />Macho</label>
+
+                <div class="radios"> <br>
+                    <label><input value="femea" name="sexo" type="radio" /> Fêmea</label>
+                    <label><input value="macho" name="sexo" type="radio" />Macho</label>
                 </div>
             </div>
 
@@ -54,20 +54,19 @@
             <button type="submit" class="botao">Cadastrar</button>
         </form>
     </main>
-    <footer>
-        <div class="footer-blocos">
-            <div class="footer-esquerda">
-                <img src="img.jpg/footer.png" alt="Logo Vida Pet" />
-            </div>
 
+   <footer>
+    <div class="cap">
+      <img src="img.jpg/footer.png" alt="CAP">
 
-            <div class="footer-centro"></div>
-            <div class="footer-direita">
-                <img src="img.jpg/whatsasp.png" alt="Logo Vida Pet/icone whatsasp" />
-                <img src="img.jpg/Instagram.png" alt="Logo Vida Pet/icone Instagram" />
-                <img src="img.jpg/facebook-rodapé.png" alt="Logo Vida Pet/ icone facebook" />
-
-                <p class="copyright">Copyright 2025 © Hospital Vet Popular - Todos os direitos reservados</p>
-
-                <img src="img.jpg/Cachorro-Home-Rodapé.png" alt="Cachorro feliz" class="cachorro" />
-    </footer>
+    </div>
+    <div class="redes">
+      <img src="img.jpg/whatsasp.png" alt="WhatsApp">
+      <img src="img.jpg/facebook-rodapé.png" alt="Facebook">
+      <img src="img.jpg/Instagram.png" alt="Instagram">
+    </div>
+    <p>Copyright 2025 © Hospital Vet Popular - Todos os direitos reservados</p>
+    <img src="img.jpg/Cachorro-Home-Rodapé.png" alt="Cachorro" class="cachorro">
+  </footer>
+</body>
+</html>
