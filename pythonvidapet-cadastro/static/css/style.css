@@ -1,0 +1,182 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&#39;');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+
+.logo img {
+    height: 120px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+
+
+header nav a:hover {
+    color:white;
+    text-decoration: none;
+    justify-items: end;
+    font-size: 18px;
+ 
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+
+
+
+
+nav {
+   display: flex;
+   align-items: center;
+    gap: 23px;
+    text-decoration-color: #ffffff;
+
+}
+
+
+body {
+  margin: 0;
+  background-color: #E5FFEC;
+}
+
+header {
+  background-color: #5ba86f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+main {
+  padding: 50px;
+  background-color: 9AD3A8;
+  margin: 150px;
+  border-radius: 10px;
+}
+
+main h2 {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.linha {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #777;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+}
+
+.radios {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.telefoneescrita {
+    display: flex;
+    justify-content: end;
+   flex-direction: row;
+}
+
+
+.telefone {
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  gap: 8px;
+  flex-direction: row;
+}
+
+.telefone img {
+  width: 20px;
+  height: auto;
+}
+
+.botao {
+  background-color: #3e965b;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  width: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #333;
+}
+
+footer {
+  background-color: #6CA782;
+  padding: 20px;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.cap {
+  display: flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.redes img {
+  width: 35px;
+  margin: 0 5px;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.cachorro {
+  position: absolute;
+  bottom: 80px;;
+  right: 0px;
+  width: 410px;
+}
+
+.pata {
+  color: green;
+}
