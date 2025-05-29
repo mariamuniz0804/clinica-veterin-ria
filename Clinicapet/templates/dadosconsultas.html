@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Consultas Agendadas{% endblock %}
+
+{% block content %}
+<div class="page-container">
+  <div class="content-wrap">
+    <h1>Consultas Agendadas</h1>
+
+    {% if consultas %}
+      <ul class="lista-consultas">
+        {% for consulta in consultas %}
+          <li class="consulta-item">
+            <strong>Nome:</strong> {{ consulta.nome }} |
+            <strong>Celular:</strong> {{ consulta.celular }} |
+            <strong>Email:</strong> {{ consulta.email }} |
+            <strong>Espécie:</strong> {{ consulta.especie }} |
+            <strong>Data:</strong> {{ consulta.data_hora }} |
+            <strong>Pet:</strong> {{ consulta.nome_pet }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Nenhuma consulta agendada ainda.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

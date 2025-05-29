@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Dosagem de Medicamento - Vida Pet{% endblock %}
+
+{% block content %}
+<main>
+  <h1>Dosagem de Medicamento</h1>
+
+  <form action="{{ url_for('calcularmedicamento') }}" method="POST" class="formulario">
+    <label for="peso"><strong>Peso do pet (kg):</strong></label>
+    <input type="text" id="peso" name="peso" placeholder="Ex.: 8" required>
+
+    <label for="altura"><strong>Altura (m):</strong></label>
+    <input type="text" id="altura" name="altura" placeholder="Ex.: 0.45" required>
+
+    <label for="quantidade"><strong>Medicamento:</strong></label>
+    <input type="text" id="quantidade" name="quantidade" placeholder="Ex.: Dipirona" required>
+
+    <button type="submit">Calcular</button>
+  </form>
+
+  {% if resultado %}
+  <div class="resultado">
+    <p>{{ resultado }}</p>
+  </div>
+  {% endif %}
+</main>
+
+<footer>
+  <div class="cap">
+    <img src="{{ url_for('static', filename='img/cap.png') }}" alt="CAP">
+  </div>
+  <div class="redes">
+    <img src="{{ url_for('static', filename='img/whatsasp (1).png') }}" alt="WhatsApp">
+    <img src="{{ url_for('static', filename='img/facebook-rodapé (1).png') }}" alt="Facebook">
+    <img src="{{ url_for('static', filename='img/icon instagrem (1).png') }}" alt="Instagram">
+  </div>
+  <p>Copyright 2025 © Hospital Vet Popular - Todos os direitos reservados</p>
+  <img src="{{ url_for('static', filename='img/Cachorro-Home-Rodapé (1).png') }}" alt="Cachorro" class="cachorro">
+</footer>
+{% endblock %}
