@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d7f5d2;
+    color: #000;
+}
+
+/* HEADER */
+header {
+    background-color: #6ba56c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN AGENDAMENTO */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 40px;
+    position: relative;
+    flex: 1;
+}
+
+/* FORMULÁRIO */
+.formulario {
+    background-color: #b2dfb0;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.emoji {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    background-color: white;
+    box-shadow: 1px 1px 2px #888;
+}
+
+.input-com-icone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-com-icone input {
+    flex: 1;
+}
+
+/* DUAS COLUNAS */
+.duas-colunas {
+    display: flex;
+    gap: 10px;
+}
+
+.duas-colunas > div {
+    flex: 1;
+}
+
+/* BOTÃO */
+.botao-agendar,
+.btn-cadastrar {
+    margin-top: 20px;
+    padding: 15px 60px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #3c8b4a;
+    color: white;
+    border: double;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 1px 2px 5px #666;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 30px auto 10px;
+}
+
+.botao-agendar:hover,
+.btn-cadastrar:hover {
+    background-color: #2f733b;
+}
+
+/* IMAGEM DO CACHORRO */
+.img-cachorro img {
+    height: 250px;
+    margin-top: 60px;
+    z-index: auto;
+}
+
+/* TOPO */
+.topo {
+    background-color: #4da362;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.topo .logo img {
+    height: 50px;
+}
+
+.topo nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.topo nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topo nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* TÍTULO */
+section titulo {
+    text-align: center;
+    margin: 30px 0;
+    font-style: oblique;
+    font-size: 1.4em;
+}
+
+/* CARD */
+div card-pet {
+    background-color: #b2dfb0;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* FORM PET */
+.linha {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.linha label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.linha input[type="text"] {
+    width: 280px;
+    height: 30px;
+    box-shadow: 2px 2px 2px #444;
+    border: none;
+    padding: 5px;
+    background-color: #ffffff;
+    display: flexbox;
+}
+
+.genero-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    font-style: normal;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.telefone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.telefone img {
+    height: 20px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #e0f7df;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* INTRO */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.intro p {
+    max-width: 500px;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 1rem 0;
+}
+
+.intro img {
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+/* ABOUT */
+.about h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.about p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.about img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* SERVICES */
+.services {
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 1.8em;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.service-item {
+    background-color: #4CAF50;
+    padding: 1.5rem;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    font-size: 1.1em;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    background-color: #6CA782;
+    padding: 20px;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.cap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.redes img {
+    width: 35px;
+    margin: 0 5px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .linha {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .linha label,
+    .linha input[type="text"] {
+        width: 100%;
+    }
+
+    .btn-cadastrar {
+        width: 100%;
+    }
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #d5fadc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #a3e4b3;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+.icon-user {
+  width: 30px;
+  height: 30px;
+  background: url('user-icon.png') no-repeat center/cover;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+main {
+  flex:auto
+  text-align:center;
+  padding:60px  ;
+
+}
+
+DIV h2{
+    display:flex
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form {
+  max-width: 1000px;;
+  background-color: #eaf9ee;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+
+}
+
+.login-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: inset 1px 1px 3px #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px #888;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #83c493;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer .cap, footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer .cap img, .social img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-footer {
+  height: 40px;
+  margin: 0 10px;
+}

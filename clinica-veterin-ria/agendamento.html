@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados do Pet</title>
+  <link rel="stylesheet" href="dadosaagendamento/static/css/estilo.css">
+</head>
+<body>
+
+<header>
+  <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet" height="50">
+  <nav>
+    <a href="{{ url_for('index') }}#inicio">Início</a>
+    <a href="{{ url_for('agendamento') }}">Agendamento</a>
+    <a href="{{ url_for('index') }}#sobre">Sobre</a>
+    <a href="{{ url_for('cadastrartutor') }}">
+      <button class="btn">Cadastrar</button>
+    </a>
+  </nav>
+</header>
+
+<h1>Agendamentos</h1>
+
+<main>
+  <section class="formulario">
+    {% if agendamentos %}
+      {% for agendamento in agendamentos %}
+      <div class="card">
+        <p><em>Nome:</em> {{ agendamento.nome_tutor }}</p>
+        <p><em>Telefone:</em> {{ agendamento.telefone }} &nbsp;&nbsp; <em>E-Mail:</em> {{ agendamento.email }}</p>
+        <p><em>(Gato, Cachorro, Outros (qual))</em> {{ agendamento.tipo_pet }}</p>
+        <p><em>Data e horário:</em> {{ agendamento.data }} ; {{ agendamento.horario }}</p>
+        <p><em>Nome do Pet:</em> {{ agendamento.nome_pet }}</p>
+
+        <div class="botoes">
+          <a href="{{ url_for('editar_agendamento', codigo=loop.index0) }}" class="btn">
+            Editar &#9998;
+          </a>
+          <a href="{{ url_for('excluir_agendamento', agendamento_id=loop.index0) }}" class="btn excluir">
+            Excluir &#128465;
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>Nenhum agendamento cadastrado ainda.</p>
+    {% endif %}
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="{{ url_for('static', filename='img/cap.png') }}" alt="Logo CAP" height="50">
+    </div>
+    <div class="footer-center">
+      <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet" height="40">
+      <div class="footer-social">
+        <img src="{{ url_for('static', filename='img/whatsasp.png') }}" alt="WhatsApp">
+        <img src="{{ url_for('static', filename='img/Instagram.png') }}" alt="Instagram">
+        <img src="{{ url_for('static', filename='img/facebook-rodapé.png') }}" alt="Facebook">
+      </div>
+      <p>Copyright 2025 © Hospital Vet Popular - Todos os direitos reservados</p>
+    </div>
+    <div class="footer-right">
+      <img src="{{ url_for('static', filename='img/Cachorro-Home-Rodapé.png') }}" alt="Cachorro feliz" height="100">
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
