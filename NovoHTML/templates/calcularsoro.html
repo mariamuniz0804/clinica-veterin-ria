@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Pet - Cálculo de Soro</title>
+      <link rel="stylesheet" href="../static/css/estilo.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('calcularsoro') }}" class="active">Calc.Soro</a></li>
+                <li><a href="{{ url_for('calcularmedicamento') }}">Calc.Medicamento</a></li>
+                <li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+                <li><a href="{{ url_for('agendamento') }}">Agendamento</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="calculo-soro">
+            <h1>Cálculo para Quantidade de Mililitros de Soro</h1>
+
+            <form action="{{ url_for('calcular_soro') }}" method="POST">
+                <!-- Peso do Pet -->
+                <div class="form-group">
+                    <label for="peso">Peso do pet (ex.: 8kg):</label>
+                    <input type="number" id="peso" name="peso" step="0.1" min="0.1" required>
+                    <span>kg</span>
+                </div>
+
+                <!-- Nível de Desidratação -->
+                <div class="form-group">
+                    <label for="desidratacao">Nível de desidratação:</label>
+                    <select id="desidratacao" name="desidratacao" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="leve">Leve (5%)</option>
+                        <option value="moderada">Moderada (7%)</option>
+                        <option value="grave">Grave (10%)</option>
+                    </select>
+                </div>
+
+                <!-- Exibição do Resultado (vindo do servidor) -->
+                {% if resultado %}
+                <div class="form-group resultado">
+                    <label>Quantidade de soro calculada:</label>
+                    <div>{{ resultado }} ml</div>
+                </div>
+                {% endif %}
+
+                <!-- Botão de Calcular -->
+                <div class="form-group">
+                    <button type="submit">Calcular</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+  <!-- Rodapé -->
+<footer>
+    <div class="footer-container">
+        <!-- Seção esquerda - CAP e informações textuais -->
+        <div class="footer-section">
+            <div class="cap-content">
+                <img src="{{ url_for('static', filename='img/cap.png') }}" alt="CAP" class="cap-logo">
+                <div class="cap-text">
+                    <p>Cartas de</p>
+                    <p>percambiento ao Par</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright 2023 © VIDA-PET</p>
+                <p>Todos os direitos reservados</p>
+            </div>
+        </div>
+
+        <!-- Seção central - Imagem do cachorro -->
+        <div class="footer-section">
+            <img src="{{ url_for('static', filename='img/cachorro-home-rodape.png') }}" alt="Cachorro" class="footer-dog">
+        </div>
+
+        <!-- Seção direita - Contato e redes sociais -->
+        <div class="footer-section">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="{{ url_for('static', filename='img/icone-brasil-telefone.png') }}" alt="Telefone">
+                    <p>(XX) XXXX-XXXX</p>
+                </div>
+                <div class="social-media">
+                    <a href="#"><img src="{{ url_for('static', filename='img/facebook-rodape.png') }}" alt="Facebook"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/instagram-rodape.png') }}" alt="Instagram"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/whatsasp-rodape.png') }}" alt="WhatsApp"></a>
+                </div>
+            </div>
+            <img src="{{ url_for('static', filename='img/footer.png') }}" alt="Footer decorativo" class="footer-decoration">
+        </div>
+    </div>
+</footer>
+</body>
+</html>

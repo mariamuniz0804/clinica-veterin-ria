@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Pet - Cadastro do Tutor</title>
+      <link rel="stylesheet" href="../static/css/estilo.css">
+
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('calcularsoro') }}">Calc.Soro</a></li>
+                <li><a href="{{ url_for('calcularmedicamento') }}">Calc.Medicamento</a></li>
+                <li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+                <li><a href="{{ url_for('agendamento') }}">Agendamento</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="cadastro-tutor">
+            <h1>Cadastro do Tutor</h1>
+
+            <form action="{{ url_for('cadastrar_tutor') }}" method="POST">
+                <!-- Nome do Tutor -->
+                <div class="form-group">
+                    <label for="nome">Nome do Tutor:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <!-- Telefone -->
+                <div class="form-group">
+                    <label for="telefone">Telefone do Tutor:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Senha -->
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+
+                <!-- Confirmar Senha -->
+                <div class="form-group">
+                    <label for="confirmar_senha">Confirme Sua Senha:</label>
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+                </div>
+
+                <!-- Botão de Submit -->
+                <div class="form-group">
+                    <button type="submit">CADASTRAR</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+<footer>
+    <div class="footer-container">
+        <!-- Seção esquerda - CAP e informações textuais -->
+        <div class="footer-section">
+            <div class="cap-content">
+                <img src="{{ url_for('static', filename='img/cap.png') }}" alt="CAP" class="cap-logo">
+                <div class="cap-text">
+                    <p>Cartas de</p>
+                    <p>percambiento ao Par</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright 2023 © VIDA-PET</p>
+                <p>Todos os direitos reservados</p>
+            </div>
+        </div>
+
+        <!-- Seção central - Imagem do cachorro -->
+        <div class="footer-section">
+            <img src="{{ url_for('static', filename='img/cachorro-home-rodape.png') }}" alt="Cachorro" class="footer-dog">
+        </div>
+
+        <!-- Seção direita - Contato e redes sociais -->
+        <div class="footer-section">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="{{ url_for('static', filename='img/icone-brasil-telefone.png') }}" alt="Telefone">
+                    <p>(XX) XXXX-XXXX</p>
+                </div>
+                <div class="social-media">
+                    <a href="#"><img src="{{ url_for('static', filename='img/facebook-rodape.png') }}" alt="Facebook"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/instagram-rodape.png') }}" alt="Instagram"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/whatsasp-rodape.png') }}" alt="WhatsApp"></a>
+                </div>
+            </div>
+            <img src="{{ url_for('static', filename='img/footer.png') }}" alt="Footer decorativo" class="footer-decoration">
+        </div>
+    </div>
+</footer>
+</body>
+</html>

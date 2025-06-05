@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Pet - Editar Dados do Pet</title>
+    <link rel="stylesheet" href="../static/css/estilo.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="../static/img/logo.png" alt="Logo Vida Pet">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../templates/index.html">Home</a></li>
+                <li><a href="../templates/calcularsoro.html">Calc.Soro</a></li>
+                <li><a href="../templates/calcularmedicamento.html">Calc.Medicamento</a></li>
+                <li><a href="../templates/servicos.html">Serviços</a></li>
+                <li><a href="../templates/agendamento.html">Agendamento</a></li>
+                <li><a href="../templates/login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="profile-icon">
+            <img src="../static/img/perfil.png" alt="Perfil">
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="editar-pet">
+            <h1>Editar Dados do Pet</h1>
+
+            <form action="#" method="POST">
+                <!-- Nome do Pet -->
+                <div class="form-group">
+                    <label for="nome-pet">Nome do Pet:</label>
+                    <input type="text" id="nome-pet" name="nome-pet" required>
+                </div>
+
+                <!-- Raça do Pet -->
+                <div class="form-group">
+                    <label for="raca-pet">Raça do Pet:</label>
+                    <input type="text" id="raca-pet" name="raca-pet" required>
+                </div>
+
+                <!-- Peso do Pet -->
+                <div class="form-group">
+                    <label for="peso-pet">Peso do Pet (kg):</label>
+                    <input type="number" id="peso-pet" name="peso-pet" step="0.1" min="0.1" required>
+                </div>
+
+                <!-- Sexo do Pet -->
+                <div class="form-group">
+                    <label>Sexo:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="sexo-pet" value="macho" required> Macho
+                        </label>
+                        <label>
+                            <input type="radio" name="sexo-pet" value="femea"> Fêmea
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Botão de Salvar -->
+                <div class="form-group">
+                    <button type="submit" class="btn-primary">SALVAR ALTERAÇÃO</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="cap-section">
+                <img src="../static/img/cap.png" alt="CAP" class="cap-logo">
+            </div>
+
+            <div class="social-section">
+                <div class="social-links">
+                    <a href="#"><img src="../static/img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="../static/img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="../static/img/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+                <p class="copyright">Copyright © Vida Pet - Todos os direitos reservados</p>
+            </div>
+
+            <div class="dog-image">
+                <img src="../static/img/cachorro-rodape.png" alt="Cachorro feliz">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Pet - Cadastro do Pet</title>
+      <link rel="stylesheet" href="../static/css/estilo.css">
+    <!-- CSS será adicionado posteriormente -->
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('calcularsoro') }}">Calc.Soro</a></li>
+                <li><a href="{{ url_for('calcularmedicamento') }}">Calc.Medicamento</a></li>
+                <li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+                <li><a href="{{ url_for('agendamento') }}">Agendamento</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="cadastro-pet">
+            <h1>Cadastro do Pet</h1>
+
+            <form action="{{ url_for('cadastrar_pet') }}" method="POST">
+                <!-- Nome do Pet -->
+                <div class="form-group">
+                    <label for="nome_pet">Nome do Pet:</label>
+                    <input type="text" id="nome_pet" name="nome_pet" required>
+                </div>
+
+                <!-- Raça do Pet -->
+                <div class="form-group">
+                    <label for="raca">Raça do Pet:</label>
+                    <input type="text" id="raca" name="raca" required>
+                </div>
+
+                <!-- Sexo do Pet -->
+                <div class="form-group sexo-group">
+                    <label>Sexo:</label>
+                    <div class="radio-options">
+                        <label>
+                            <input type="radio" name="sexo" value="macho" required> Macho
+                        </label>
+                        <label>
+                            <input type="radio" name="sexo" value="femea"> Fêmea
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Botão de Submit -->
+                <div class="form-group">
+                    <button type="submit">CADASTRAR</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+   <!-- Rodapé -->
+<footer>
+    <div class="footer-container">
+        <!-- Seção esquerda - CAP e informações textuais -->
+        <div class="footer-section">
+            <div class="cap-content">
+                <img src="{{ url_for('static', filename='img/cap.png') }}" alt="CAP" class="cap-logo">
+                <div class="cap-text">
+                    <p>Cartas de</p>
+                    <p>percambiento ao Par</p>
+                </div>
+            </div>
+           <div class="copyright">
+                <p>Copyright 2023 © VIDA-PET</p>
+                <p>Todos os direitos reservados</p>
+            </div>
+
+        <!-- Seção central - Imagem do cachorro -->
+        <div class="footer-section">
+            <img src="{{ url_for('static', filename='img/cachorro-home-rodape.png') }}" alt="Cachorro" class="footer-dog">
+        </div>
+
+        <!-- Seção direita - Contato e redes sociais -->
+        <div class="footer-section">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="{{ url_for('static', filename='img/icone-brasil-telefone.png') }}" alt="Telefone">
+                    <p>(XX) XXXX-XXXX</p>
+                </div>
+                <div class="social-media">
+                    <a href="#"><img src="{{ url_for('static', filename='img/facebook-rodape.png') }}" alt="Facebook"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/instagram-rodape.png') }}" alt="Instagram"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='img/whatsasp-rodape.png') }}" alt="WhatsApp"></a>
+                </div>
+            </div>
+            <img src="{{ url_for('static', filename='img/footer.png') }}" alt="Footer decorativo" class="footer-decoration">
+        </div>
+    </div>
+</footer>
+</body>
+</html>
