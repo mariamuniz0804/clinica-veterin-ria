@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastrar Tutor - Vida Pet</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}" />
+</head>
+<body>
+
+<header>
+  <h1>Cadastrar Tutor</h1>
+</header>
+
+<main>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flash-messages">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="POST" action="{{ url_for('cadastrartutor') }}">
+    <label for="nomeTutor">Nome:</label><br />
+    <input type="text" id="nomeTutor" name="nomeTutor" required /><br />
+
+    <label for="telefoneTutor">Telefone:</label><br />
+    <input type="text" id="telefoneTutor" name="telefoneTutor" required /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br />
+
+    <label for="senha">Senha:</label><br />
+    <input type="password" id="senha" name="senha" required /><br />
+
+    <label for="confirmaSenha">Confirmar Senha:</label><br />
+    <input type="password" id="confirmaSenha" name="confirmaSenha" required /><br /><br />
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <p>Já tem uma conta? <a href="{{ url_for('login') }}">Faça login aqui</a>.</p>
+  <p><a href="{{ url_for('index') }}">Voltar para a página inicial</a></p>
+</main>
+
+</body>
+</html>
