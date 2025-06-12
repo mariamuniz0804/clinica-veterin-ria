@@ -1,28 +1,66 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista de Consultas - Vida Pet</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}" />
+</head>
+<body>
 
-{% block title %}Consultas Agendadas{% endblock %}
+<header>
+  <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Vida Pet" />
+  <nav>
+    <a href="{{ url_for('index') }}">Início</a>
+    <a href="{{ url_for('agendamento') }}">Agendar Consulta</a>
+  </nav>
+</header>
 
-{% block content %}
-<div class="page-container">
-  <div class="content-wrap">
-    <h1>Consultas Agendadas</h1>
+<div class="container">
+  <h2>Lista de Consultas</h2>
 
-    {% if consultas %}
-      <ul class="lista-consultas">
-        {% for consulta in consultas %}
-          <li class="consulta-item">
-            <strong>Nome:</strong> {{ consulta.nome }} |
-            <strong>Celular:</strong> {{ consulta.celular }} |
-            <strong>Email:</strong> {{ consulta.email }} |
-            <strong>Espécie:</strong> {{ consulta.especie }} |
-            <strong>Data:</strong> {{ consulta.data_hora }} |
-            <strong>Pet:</strong> {{ consulta.nome_pet }}
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>Nenhuma consulta agendada ainda.</p>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+      {% endfor %}
     {% endif %}
-  </div>
+  {% endwith %}
+
+  {% if consultas %}
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Hora</th>
+          <th>Pet</th>
+          <th>Tutor</th>
+          <th>Veterinário</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for consulta in consultas %}
+        <tr>
+          <td>{{ consulta.data }}</td>
+          <td>{{ consulta.hora }}</td>
+          <td>{{ consulta.pet }}</td>
+          <td>{{ consulta.tutor }}</td>
+          <td>{{ consulta.veterinario }}</td>
+          <td>
+            <p>Editar</p>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>Nenhuma consulta agendada.</p>
+  {% endif %}
 </div>
-{% endblock %}
+
+<footer>
+  <p>© 2025 Clínica Vida Pet</p>
+</footer>
+
+</body>
+</html>

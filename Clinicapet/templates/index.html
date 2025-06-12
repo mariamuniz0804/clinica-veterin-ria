@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clínica Vida Pet</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}" />
 </head>
-<body>
-  <!-- Cabeçalho -->
-     <header>
-        <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet" height="50" />
-        <nav>
-            <a href="{{ url_for('index') }}#inicio">Início</a>
-            <a href="{{ url_for('agendamento') }}">Agendamento</a>
-            <a href="{{ url_for('index') }}#sobre">Sobre</a>
-            <a href="{{ url_for('cadastrartutor') }}">
-                <button class="btn">Cadastrar</button>
-            </a>
-        </nav>
-    </header>
 
-  <!-- Seção principal -->
+<body>
+
+  <header>
+    <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet" height="50" />
+    <nav>
+      <a href="{{ url_for('index') }}#inicio">Início</a>
+      <a href="{{ url_for('agendamento') }}">Agendamento</a>
+      <a href="{{ url_for('calcularmedicamento') }}">calculadora de medicamento</a>
+      <a href="{{ url_for('calcularsoro') }}">calculadora de soro</a>
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="{{ url_for('cadastrartutor') }}">cadastrar tutor</a>
+    </nav>
+  </header>
+
   <section class="container intro" id="inicio">
     <div class="intro-text">
-      <h1>Clínica Vida Pet <span>🐾</span></h1>
+      <h1>Clínica Vida Pet </h1>
       <p>
-        Vida Pet é uma clínica veterinária especializada e com uma estrutura completa para cuidar do seu animal de estimação.
-        Nossa equipe de veterinários possui anos de experiência no tratamento de doenças graves e oferecemos ao seu bichinho os melhores cuidados e os melhores profissionais.
+        Vida Pet é uma clínica veterinária especializada e com uma estrutura completa para cuidar do seu animal de
+        estimação.
+        Nossa equipe de veterinários possui anos de experiência no tratamento de doenças graves e oferecemos ao seu
+        bichinho os melhores cuidados e os melhores profissionais.
       </p>
-      <a href="{{ url_for('agendamento') }}" class="btn">Agende sua consulta!</a>
+      <a href="login.html" class="login-button">Faça o login!</a>
+
     </div>
     <img src="{{ url_for('static', filename='img/imagem sobre.png') }}" alt="Veterinária com cachorro" height="250" />
   </section>
 
-  <!-- Sobre nós -->
+
   <section class="container about" id="sobre">
     <h2>Quem Somos – Vida Pet</h2>
     <p>
-      Na Vida Pet, o amor pelos animais é o que nos move! Somos uma clínica veterinária em Birigui, dedicada ao cuidado completo do seu pet, com carinho, respeito e profissionalismo.
-      Nossa missão é oferecer um atendimento de excelência, com uma equipe apaixonada por pets e preparada para cuidar da saúde, bem-estar e qualidade de vida do seu melhor amigo.
+      Na Vida Pet, o amor pelos animais é o que nos move! Somos uma clínica veterinária em Birigui, dedicada ao cuidado
+      completo do seu pet, com carinho, respeito e profissionalismo.
+      Nossa missão é oferecer um atendimento de excelência, com uma equipe apaixonada por pets e preparada para cuidar
+      da saúde, bem-estar e qualidade de vida do seu melhor amigo.
     </p>
     <img src="{{ url_for('static', filename='img/img quem somos.png') }}" alt="Equipe veterinária" height="200" />
   </section>
 
-  <!-- Serviços -->
+
   <section class="container services">
-    <h2>Nossos serviços <span>🐾</span></h2>
+    <h2>Nossos serviços </h2>
     <div class="service-grid">
       <div class="service-item">Exames Laboratoriais</div>
       <div class="service-item">Consultas Veterinárias</div>
@@ -54,7 +60,7 @@
     </div>
   </section>
 
-  <!-- Rodapé -->
+
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-left">
@@ -75,4 +81,5 @@
     </div>
   </footer>
 </body>
+
 </html>

@@ -1,27 +1,45 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cal.Soro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}" />
+</head>
+<body>
+      <header>
+        <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet" height="50" />
+        <nav>
+      <a href="{{ url_for('index') }}#inicio">Início</a>
+      <a href="{{ url_for('agendamento') }}">Agendamento</a>
+      <a href="{{ url_for('login') }}#login">Login</a>
+      <a href="{{ url_for('calcularmedicamento') }}calculadorademedicamento">calculadora de medicamento</a>
+      <a href="{{ url_for('calcularsoro') }}calculadoradesoro">calculadora de soro</a>
+      <a href="{{ url_for('cadastrartutor') }}">Cadastrar</a>
+    </nav>
+    </header>
 
-{% block title %}Dosagem de Medicamento - Vida Pet{% endblock %}
-
-{% block content %}
 <main>
-  <h1>Dosagem de Medicamento</h1>
+  <h1 class="titulocalculosoro">Cálculo de Soro</h1>
 
-  <form action="{{ url_for('calcularmedicamento') }}" method="POST" class="formulario">
+  <form action="{{ url_for('calcularsoro') }}" method="POST" class="formulario">
     <label for="peso"><strong>Peso do pet (kg):</strong></label>
     <input type="text" id="peso" name="peso" placeholder="Ex.: 8" required>
 
-    <label for="altura"><strong>Altura (m):</strong></label>
-    <input type="text" id="altura" name="altura" placeholder="Ex.: 0.45" required>
+   <label for="quantidade">Grau de Desidratação:</label>
+    <select name="quantidade" id="quantidade" >
+      <option value="Leve">Leve</option>
+      <option value="Moderada">Moderada</option>
+        <option value="Grave">Grave</option>
 
-    <label for="quantidade"><strong>Medicamento:</strong></label>
-    <input type="text" id="quantidade" name="quantidade" placeholder="Ex.: Dipirona" required>
+</select>
+    <button class="botao-calcular" type="submit">Calcular</button>
+</form>
 
-    <button type="submit">Calcular</button>
-  </form>
 
-  {% if resultado %}
-  <div class="resultado">
-    <p>{{ resultado }}</p>
+  {% if total %}
+  <div class="resultadosoro">
+    <p>{{ total }}</p>
   </div>
   {% endif %}
 </main>
@@ -31,11 +49,9 @@
     <img src="{{ url_for('static', filename='img/cap.png') }}" alt="CAP">
   </div>
   <div class="redes">
-    <img src="{{ url_for('static', filename='img/whatsasp (1).png') }}" alt="WhatsApp">
+    <img src="{{ url_for('static', filename='img/whatsasp (1).png') }}" class>
     <img src="{{ url_for('static', filename='img/facebook-rodapé (1).png') }}" alt="Facebook">
     <img src="{{ url_for('static', filename='img/icon instagrem (1).png') }}" alt="Instagram">
   </div>
   <p>Copyright 2025 © Hospital Vet Popular - Todos os direitos reservados</p>
   <img src="{{ url_for('static', filename='img/Cachorro-Home-Rodapé (1).png') }}" alt="Cachorro" class="cachorro">
-</footer>
-{% endblock %}

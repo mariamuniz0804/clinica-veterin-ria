@@ -1,70 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro Pet - Vida Pet</title>
+  <meta charset="UTF-8" />
+  <title>Cadastrar Pet - Vida Pet</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}" />
 </head>
 <body>
-     <header>
-        <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet" height="50" />
-        <nav>
-            <a href="{{ url_for('index') }}#inicio">Início</a>
-            <a href="{{ url_for('agendamento') }}">Agendamento</a>
-            <a href="{{ url_for('index') }}#sobre">Sobre</a>
-            <a href="{{ url_for('cadastrartutor') }}">
-                <button class="btn">Cadastrar</button>
-            </a>
-        </nav>
-    </header>
+  <header>
+    <img src="{{ url_for('static', filename='img/logo (1).png') }}" alt="Logo Vida Pet" height="50" />
+    <nav>
+      <a href="{{ url_for('index') }}#inicio">Início</a>
+      <a href="{{ url_for('agendamento') }}">Agendamento</a>
+      <a href="{{ url_for('calcularmedicamento') }}">calculadora de medicamento</a>
+      <a href="{{ url_for('calcularsoro') }}">calculadora de soro</a>
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="{{ url_for('cadastrartutor') }}">cadastrar tutor</a>
+    </nav>
+  </header>
+<header>
+  <h1>Cadastrar Pet</h1>
+</header>
+
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastrar Pet</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}" />
+</head>
+<body>
+  <header>
+    Cadastrar Pet
+  </header>
+
+    <form>
+      <label for="nomePet">Nome do Pet:</label>
+      <input type="text" id="nomePet" name="nomePet" />
+
+      <label for="raca">Raça:</label>
+      <input type="text" id="raca" name="raca" />
+
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" name="peso" />
+
+      <label for="genero">Gênero:</label>
+      <select id="genero" name="genero">
+        <option value="macho">Macho</option>
+        <option value="femea">Fêmea</option>
+      </select>
+
+      <label for="nomeTutor">Nome do Tutor:</label>
+      <input type="text" id="nomeTutor" name="nomeTutor" />
+
+      <label for="telefoneTutor">Telefone do Tutor:</label>
+      <input type="tel" id="telefoneTutor" name="telefoneTutor" />
+
+      <div class="full-width">
+        <button class="submit-button" type="submit">Cadastrar</button>
+      </div>
+    </form>
+
+    <div class="link">
+      <a href="#">Ver Pets cadastrados</a>
+  </div>
 
 
-  <main>
-    <h2>Cadastro do Pet</h2>
 
-    <section class="formulario">
-      <form method="POST" action="{{ url_for('cadastrarpet') }}">
-        <div class="linha">
-          <label for="nome_pet">Nome do Pet:</label>
-          <input type="text" id="nome_pet" name="nome_pet" required>
-        </div>
 
-        <div class="linha">
-          <label for="raca_pet">Raça:</label>
-          <input type="text" id="raca_pet" name="raca_pet" required>
-        </div>
-
-        <div class="linha">
-          <label for="peso_pet">Peso:</label>
-          <input type="number" id="peso_pet" name="peso_pet" step="0.1" required>
-        </div>
-
-        <div class="linha">
-          <label for="genero">Gênero:</label>
-          <select id="genero" name="genero" required>
-            <option value="Macho">Macho</option>
-            <option value="Fêmea">Fêmea</option>
-          </select>
-        </div>
-
-        <div class="linha">
-          <label for="nome_tutor">Nome do Tutor:</label>
-          <input type="text" id="nome_tutor" name="nome_tutor" required>
-        </div>
-
-        <div class="linha">
-          <label for="telefone_tutor">Telefone do Tutor:</label>
-          <input type="text" id="telefone_tutor" name="telefone_tutor" required>
-        </div>
-
-        <button type="submit" class="btn">Cadastrar Pet</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-     <footer class="footer">
+  <footer
+        class="footer">
     <div class="footer-content">
       <div class="footer-left">
         <img src="{{ url_for('static', filename='img/cap.png') }}" alt="Logo CAP" height="50" />
@@ -83,6 +88,7 @@
       </div>
     </div>
   </footer>
-  </footer>
+
+
 </body>
 </html>
